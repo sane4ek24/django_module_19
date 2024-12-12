@@ -1,0 +1,20 @@
+{% extends "menu.html" %}
+
+{% block name %}{{text}}{% endblock %}
+
+{% block pagename %}
+<h1>{{text}}</h1>
+{% endblock %}
+
+{% block content %}
+    <ul style="list-style-type: disc; padding-left: 20px;">
+        {% for game in game_list %}
+            <li style="display: flex; align-items: center; margin-bottom: 10px;">
+                <p style="margin-right: 10px;">{{ game.title }} | {{ game.description }}. Стоимость: {{ game.cost }} </p>
+                <button>Купить</button>
+            </li>
+        {% empty %}
+            <p>Нет доступных игр</p>
+        {% endfor %}
+    </ul>
+{% endblock %}
