@@ -24,4 +24,5 @@ urlpatterns = [
     path('platform/cart/', cart),
     path('platform/cases/', cases),
     path('sign_up_by_html/', sign_up_by_html),
+    path('platform/news/', news)
 ]
